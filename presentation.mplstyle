@@ -14,7 +14,7 @@ ytick.labelsize: 15
 ytick.direction: in
 
 # LEGEND
-legend.fontsize: 12
+legend.fontsize: 20
 
 # FIGURE
 figure.figsize: 19.2,10.8

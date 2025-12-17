@@ -2,7 +2,7 @@ import sys
 
 import matplotlib.pyplot as plt
 
-from MapsViewer.helper import find_scans
+from MapsViewer.helper import findScans
 from MapsViewer.fits import Fits
 
 plt.style.use('/home/vchalamet/Documents/Code/IRAM-30m-Observation/presentation.mplstyle')
@@ -14,7 +14,7 @@ def main(args):
 
     # Find the 4 rotations
     fitsList = [Fits(filePath)]
-    find_scans(fitsList, filePath)
+    findScans(fitsList, filePath)
     print(f"Found scans : {fitsList}")
 
     fig = plt.figure()

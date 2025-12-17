@@ -4,7 +4,7 @@ import numpy as np
 
 from .fits import Fits
 
-def find_scans(scan_list, filePath):
+def findScans(scan_list, filePath):
     """
     # Function that finds the 4 consecutive scans
     Give the first of the four as `filePath`
@@ -39,3 +39,14 @@ def chi2Reduced(y_measure, y_predict, errors, dof):
     """Calculate the reduced chi squared value given a measurement with errors and prediction,
     and knowing the number of parameters in the model."""
     return chi2(y_measure, y_predict, errors)/(y_measure.size - dof)
+
+def findIndex(array, value, option='top'):
+    """ Find the index of the first element above or below a given value in a sorted array"""
+    if option == 'top':
+        for i in range(len(array)):
+            if array[i]>=value:
+                return i
+    elif option == 'bottom':
+        for i in range(len(array)):
+            if array[i]<=value:
+                return i
